@@ -1,0 +1,34 @@
+### Global Values if any ###
+global: {}
+
+### Sub Charts Specific Values ###
+# Portal
+portal:
+  enabled: true
+  image:
+    version:
+# Customer Management
+customer-management:
+  enabled: true
+  image:
+    version:
+# Product Catalog
+product-catalog:
+  enabled: true
+  image:
+    version:
+# Order Management
+order-management:
+  enabled: true
+  image:
+    version:
+# Order History
+order-history:
+  enabled: true
+  image:
+    version:
+# Payment Solution
+payment-solution:
+  enabled: true
+  image:
+    version:

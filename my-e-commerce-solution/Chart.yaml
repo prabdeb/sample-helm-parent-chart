@@ -1,0 +1,34 @@
+apiVersion: v2
+name: my-e-commerce-solution
+description: A Parent Helm chart for Kubernetes
+type: application
+# This is the chart version. This version number should be incremented each time you make changes
+# to the chart and its templates
+version: 0.1.0
+# All E-Commerce micro-services Helm Charts that are needed
+# versions needs to be changed, whenever corresponding the sub chart versions are changing
+dependencies:
+- name: portal
+  repository: file://charts/portal
+  version: 0.1.0
+  condition: portal.enabled
+- name: customer-management
+  repository: file://charts/customer-management
+  version: 0.1.0
+  condition: customer-management.enabled
+- name: product-catalog
+  repository: file://charts/product-catalog
+  version: 0.1.0
+  condition: product-catalog.enabled
+- name: order-management
+  repository: file://charts/order-management
+  version: 0.1.0
+  condition: order-management.enabled
+- name: order-history
+  repository: file://charts/order-history
+  version: 0.1.0
+  condition: order-history.enabled
+- name: payment-solution
+  repository: file://charts/payment-solution
+  version: 0.1.0
+  condition: payment-solution.enabled
